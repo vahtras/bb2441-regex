@@ -155,7 +155,7 @@ re.search = search(pattern, string, flags=0)
 
 * returns a Match object or the `None` object (no match)
 * the Match object has methods
-* `'()'` groups matched parts that we can back-reference
+* `'()'` in `pattern` saves matched parts that we can back-reference later
 
 
 Example
@@ -240,6 +240,12 @@ One more: string substitution
 * `[]` character class
 * Predifined classes `\s` (white space), `\w` (alphanumemric), `\d` (digit)
 * Modifiers `^` (not), `+` (one or more), `*` (zero or more), `?` (zero or
-* one), '|' (or)
+* one), `|` (or)
 * Count: `{n}` (repeated `n` times)
-* '()' grouping matches for back referencing, grouped matches are referenced with `\1\, \2...`
+* `()` grouping matches for back referencing, grouped matches are referenced with `\1\, \2...`
+
+`re` module functions
+
+* `re.findall(pattern, string)`: returns all matches of `pattern` in `string` as a list of strings.
+* `re.search(pattern, string)`:  returns the first match of `pattern` in `string` as a Match object
+
