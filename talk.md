@@ -99,18 +99,15 @@ There are some macros for common classes
 Specifying a count: `{}`
 
 * `\d{2}` two digits, equivalent to `\d\d`
-* `\d{2,3}` two or three digits
-* `\d{1-3}` range of one to three digits
+* `\d{1,3}`  one to three digits
 * `*`: any number
 * `+`: any number greater than zero
 
 ```python
 >>> re.findall('\d{2}', 'Agent 007')
 ['00']
->>> re.findall('\d{2,3}', 'Agent 007')
+>>> re.findall('\d{1,3}', 'Agent 007')
 ['007']
->>> re.findall('\d{1-3}', 'Agent 007')
-[]
 >>> re.findall('\d+', 'Agent 007')
 ['007']
 
@@ -123,7 +120,6 @@ the string and then continues with the `'7'`
 
 `\w` does not include blanks
 
-The range notation is  what *CHECK*
 
 ---
 
