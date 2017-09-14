@@ -383,17 +383,18 @@ Examples:
 
 ---
 
-One more: string substitution
+For the final task:
 
+String substitution in Python: combining different objects to string output
 
 ```python
->>> two = 2
->>> "a number: %d" % two
-'a number: 2'
->>> "a number: {}".format(two)
-'a number: 2'
->>> f"a number: {two}"
-'a number: 2'
+>>> two_numbers = (2, 4)
+>>> "Two numbers: %d and %d" % two_numbers
+'Two numbers: 2 and 4'
+>>> "Two numbers: {0[0]} and {0[1]}".format(two_numbers)
+'Two numbers: 2 and 4'
+>>> f"Two numbers: {two_numbers[0]} and {two_numbers[1]}" #Python 3.6 only
+'Two numbers: 2 and 4'
 
 ```
 
